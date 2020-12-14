@@ -24,7 +24,6 @@ require_once DOKU_INC.'lib/plugins/aceeditor/action.php';
 class action_plugin_aceeditorconf extends action_plugin_aceeditor {
 
     public function register(Doku_Event_Handler $controller){
-        $controller->register_hook('WIOC_AJAX_COMMAND_STARTED', 'AFTER',
-                                   $this, 'handle_dokuwiki_started');
+        $controller->register_hook('WIOC_AJAX_COMMAND_STARTED', 'AFTER', $this, 'handle_dokuwiki_started');
     }
 }
